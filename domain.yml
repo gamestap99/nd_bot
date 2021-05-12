@@ -1,0 +1,57 @@
+version: "2.0"
+
+session_config:
+  session_expiration_time: 60.0
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- thankyou
+- praise
+- decry
+- ask_for_lunch
+- ask_ability
+- give_name
+
+entities:
+  - cust_sex
+  - cust_name
+
+slots:
+  cust_sex:
+    auto_fill: true
+    type: text
+  cust_name:
+    auto_fill: true
+    type: text
+
+responses:
+  utter_greet:
+  - text: "Em chào anh(chị) ạ. Em là ND bot em có thể giúp gì cho anh chị ạ"
+  utter_goodbye:
+  - text: "Hẹn gặp lại anh chị ạ ^^"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_happy:
+  - text: "Hì hì, anh chị khen quá lơì rồi ạ"
+  utter_sorry:
+  - text: "Em xin lôĩ vì em chưa đủ thông minh ạ =((("
+  utter_noworries:
+  - text: "Em luôn sẵn lòng giúp đỡ anh(chị) bất cứ lúc nào ạ ^^"
+  utter_show_ability:
+  - text: "Em có thể trò chuyện với anh(chị), thi thoảng có thể đề xuất anh(chị) nên
+      ăn gì trưa nay ạ"
+  utter_greet_with_name:
+  - text: "Xin chào {cust_sex} {cust_name}. ND bot có thể giúp gì được {cust_sex} {cust_name} ạ?"
+  utter_fallback:
+  - text: "Em xin lỗi, em chưa hiểu ý muốn của anh(chị) ạ. Anh chị có thể nói lại được
+      không ạ"
+actions:
+- utter_greet
+- utter_happy
+- utter_goodbye
+- utter_sorry
+- utter_noworries
+- action_recommend
+- utter_show_ability
+- utter_fallback
+- utter_greet_with_name
