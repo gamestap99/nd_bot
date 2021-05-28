@@ -12,6 +12,7 @@ intents:
 - ask_for_lunch
 - ask_ability
 - give_name
+- ask_lottery
 
 entities:
   - cust_sex
@@ -55,3 +56,4 @@ actions:
 - utter_show_ability
 - utter_fallback
 - utter_greet_with_name
+- action_get_lottery

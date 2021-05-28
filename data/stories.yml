@@ -23,3 +23,10 @@ stories:
   - action: utter_greet
   - intent: give_name
   - action: utter_greet_with_name
+
+- story: ask_lottery_give_name
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_lottery
+  - action: action_get_lottery
